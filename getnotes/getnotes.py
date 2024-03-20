@@ -413,6 +413,14 @@ class GetNotes(BaseCog):
                 f"**Number of Connections**: {player['num_connections']}",
                 inline=False,
             )
+            embed.add_field(
+                name="__Links:__",
+                value=f"**TGDB**: [Link](https://tgstation13.org/tgdb/playerdetails.php?ckey={player['ckey']})\n"
+                f"**Statbus**: [Link](https://statbus.space/tgdb/player/https://statbus.space/tgdb/player/{player['ckey']})\n"
+                f"**Mothbus**: [Link](https://bus.moth.fans/@{player['ckey']})",
+                inline=False,
+            )
+
             await message.edit(content=None, embed=embed)
 
         except ValueError:
@@ -491,6 +499,13 @@ class GetNotes(BaseCog):
                 f"**Number of Bans**: {player['num_bans']}\n"
                 f"**Last Ban**: {player['latest_ban']}\n"
                 f"**Notes per Hour**: {player['notes_per_hour']}",
+                inline=False,
+            )
+            embed.add_field(
+                name="__Links:__",
+                value=f"**TGDB**: [Link](https://tgstation13.org/tgdb/playerdetails.php?ckey={player['ckey']})\n"
+                f"**Statbus**: [Link](https://statbus.space/tgdb/player/https://statbus.space/tgdb/player/{player['ckey']})\n"
+                f"**Mothbus**: [Link](https://bus.moth.fans/@{player['ckey']})",
                 inline=False,
             )
 
